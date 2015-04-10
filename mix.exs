@@ -26,9 +26,9 @@ defmodule InterlineAPI.Mixfile do
      {:phoenix_ecto, "~> 0.1"},
      {:postgrex, ">= 0.0.0"},
      {:cowboy, "~> 1.0"},
-		 {:plug, "~> 0.11.0"},
-		 {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
-		 {:exjsx, github: "talentdeficit/exjsx", tag: "v3.1.0"},
-		 {:httpotion, "~> 2.0.0"}]
+     {:plug, "~> 0.11.0"},
+     {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
+     {:exjsx, github: "talentdeficit/exjsx", tag: "v3.1.0"},
+     {:httpotion, "~> 2.0.0"}]
   end
 end
