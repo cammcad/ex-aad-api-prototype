@@ -10,10 +10,10 @@ defmodule Plug.AzureADPlug do
 
    def validateConn(conn) do
     conn
-	|> hasAuthHeader?
-	|> bearerToken?
-	|> hasAppropriatePermissions?
-	|> backToController
+    |> hasAuthHeader?
+    |> bearerToken?
+    |> hasAppropriatePermissions?
+    |> backToController
    end
 
    defp access_denied(conn,msg) do
