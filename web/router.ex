@@ -9,19 +9,19 @@ defmodule InterlineAPI.Router do
   end
 
   pipeline :api do
-		plug Plug.AzureADPlug
+    plug Plug.AzureADPlug
   end
 
 	
-	#scope "/", InterlineAPI do
+  #scope "/", InterlineAPI do
    # pipe_through :browser # Use the default browser stack
    # get "/", PageController, :index
   #end
 
   # Other scopes may use custom stacks.
-	scope "/", InterlineAPI do		
+  scope "/", InterlineAPI do		
     pipe_through :api
-
-		get "/api", InterlineAPIController, :index
+    
+    get "/api", InterlineAPIController, :index
   end 
 end
