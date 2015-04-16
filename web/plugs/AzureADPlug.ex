@@ -96,7 +96,7 @@ defmodule Plug.AzureADPlug do
    #who issues this request.
    defp isValidClaim?({:ok,claimMap}) do
 	hasUpn = hasProp?(claimMap,"upn")
-	(hasUpn and claimMap["upn"] == "cammcad@cameronfrederickmsn.onmicrosoft.com")
+	(hasUpn and claimMap["upn"] == "username-here")
    end
    #helper 
    defp hasProp?(map,key), do: Dict.has_key?(map,key)
