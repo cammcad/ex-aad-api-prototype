@@ -64,7 +64,6 @@ defmodule Plug.AzureADPlug do
    #with the claims information to get more permission details about the user issuing this request.
    #For now... to illustrate the point we're just going to check to make sure that the first part of
    #the token is jwt compliant and that the request is only allowed for active directory user
-   # cammcad@cameronfrederickmsn.onmicrosoft.com
    defp hasAppropriatePermissions?({conn,:denied}), do: {conn,:denied}
    defp hasAppropriatePermissions?({conn,{:ok,jwt},{:ok,claimsInfo}}) do
 	case JSX.is_json?(jwt) and isValidJWT? (JSX.decode(jwt)) do
@@ -91,7 +90,7 @@ defmodule Plug.AzureADPlug do
 	end
    end
    #ensure that we have a valid claim, very simplistic implementation
-   #that just ensures that the active directory user is cammcad@cameronfrederickmsn.onmicrosoft.com
+   #that just ensures that the active directory user is the correct username
    #this is where we could call back to Azure AD for permissions that have been granted to the user
    #who issues this request.
    defp isValidClaim?({:ok,claimMap}) do
